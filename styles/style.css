@@ -1,0 +1,152 @@
+@import "./pallette.css";
+
+.app {
+  width: 100vw;
+  max-width: 1024px;
+
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  background: var(--pallette-color-3);
+  /* background: #ececec; */
+}
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+
+  width: 100vw;
+  height: 3rem;
+
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.header__container {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+}
+.header__container--text {
+  display: flex;
+  line-height: 2.25rem;
+}
+.header__container--text h1 {
+  font-size: 1.75rem;
+  margin-right: 0.5rem;
+}
+.header__container--text small {
+  font-size: 1.25rem;
+}
+
+/* DateView */
+.dateview {
+  position: fixed;
+  top: 3rem;
+  left: 0;
+
+  width: 100%;
+  max-width: 1024px;
+  height: 2rem;
+
+  background: var(--pallette-color-4);
+}
+
+/* Habits */
+.habits {
+  margin: 0 0.5rem;
+  margin-top: 3.5rem;
+  padding: 2rem 0;
+}
+.habit {
+  width: 100%;
+  height: 3rem;
+  margin-bottom: 0.5rem;
+
+  border-radius: 0.5rem;
+
+  background: var(--pallette-color-0);
+}
+
+/* Input */
+.input {
+}
+.input__fab.active {
+  display: block;
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+
+  box-sizing: border-box;
+  width: 3rem;
+  height: 3rem;
+  padding: 1rem;
+  font-size: 1.75rem;
+  line-height: 1.25rem;
+
+  background: var(--pallette-color-6);
+  border-radius: 50%;
+  color: var(--pallette-color-0);
+}
+.input__fab {
+  display: none;
+}
+.input__toast {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 768px;
+  height: 500px;
+  padding: 2rem;
+
+  border-radius: 50px 50px 0 0;
+
+  background: var(--pallette-color-0);
+
+  transform: translateY(500px);
+  transition: transform 0.5s cubic-bezier(0.06, 0.66, 0.56, 1.69) 0.5s;
+}
+.input__toast.active {
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.4);
+  transform: translateY(200px);
+  transition: transform 0.5s cubic-bezier(0.06, 0.66, 0.56, 1.69) 0.5s;
+}
+
+@media (min-width: 480px) {
+}
+@media (min-width: 768px) {
+  .header {
+    height: 4rem;
+  }
+  .header__container {
+    padding: 1rem 2rem;
+  }
+  .header__container--text {
+    font-size: 2rem;
+  }
+
+  .dateview {
+    top: 4rem;
+  }
+
+  .habits {
+    margin: 0 1rem;
+    margin-top: 4.5rem;
+  }
+
+  .input__toast {
+    left: calc(50vw - 384px);
+  }
+}
+@media (min-width: 1024px) {
+  .dateview {
+    left: calc((100% - 1024px) / 2);
+  }
+}
