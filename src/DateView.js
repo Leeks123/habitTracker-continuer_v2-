@@ -16,7 +16,15 @@ class DateView {
     render() {
         this.$target.innerHTML = `
             <div class="dateview__container">
-                tetas
+                <ul class="dateview__weekly">
+                    <li><small>월</small>1</li>
+                    <li><small>월</small>2</li>
+                    <li><small>월</small>3</li>
+                    <li><small>월</small>4</li>
+                    <li><small>월</small>5</li>
+                    <li><small>월</small>6</li>
+                    <li><small>월</small>7</li>
+                </ul>
             </div>
         `;
     }

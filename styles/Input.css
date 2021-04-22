@@ -1,0 +1,64 @@
+/* Input */
+.input {
+}
+.input__fab.active {
+  display: block;
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+
+  box-sizing: border-box;
+  width: 3rem;
+  height: 3rem;
+  padding: 1rem;
+  font-size: 1.75rem;
+  line-height: 1.25rem;
+
+  background: var(--pallette-color-6);
+  border-radius: 50%;
+  color: var(--pallette-color-0);
+}
+.input__fab {
+  display: none;
+}
+
+.input__toast {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 768px;
+  height: 500px;
+  padding: 2rem;
+
+  border-radius: 50px 50px 0 0;
+
+  background: var(--pallette-color-0);
+
+  transform: translateY(500px);
+  transition: transform 0.5s cubic-bezier(0.06, 0.66, 0.56, 1.69) 0.5s;
+}
+@keyframes toastUp {
+  from {
+    transform: translateY(500px);
+  }
+  to {
+    transform: translateY(200px);
+  }
+}
+.input__toast.active {
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.4);
+  animation: 0.5s toastUp cubic-bezier(0.06, 0.66, 0.56, 1.69) 0.3s forwards;
+}
+
+@media (min-width: 480px) {
+}
+@media (min-width: 768px) {
+  .input__toast {
+    left: calc(50vw - 384px);
+  }
+}
+@media (min-width: 1024px) {
+}
